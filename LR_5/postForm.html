@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма-анкета POST</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/custom_valid.css">
+
+  <style>
+    .add_area {
+      margin-bottom: 20px;
+    }
+
+    .selects_area {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="http://127.0.0.1:5500" method="POST">
+
+    <input type="hidden" name="student" value="Arzhan">
+
+    <label for="lastName">Фамилия:</label>
+    <input class="input-name validation__input" type="text" id="lastName" name="lastName" value="Chilchinov"
+      required><br>
+
+    <label for="firstName">Имя:</label>
+    <input class="input-name validation__input" type="text" id="firstName" name="firstName" value="Arzhan" required><br>
+
+    <label for="patronymic">Отчество:</label>
+    <input class="input-name validation__input" type="text" id="patronymic" name="patronymic" value="Alexandrovich"
+      required><br>
+
+    <label for="email">E-mail:</label>
+    <input class="input-name validation__input" type="email" id="email" name="email" value="chilchinov@mail.ru"
+      required><br>
+
+    <div class="selects_area">
+      <label for="country">Выбор страны:</label>
+      <select id="country" name="country" required>
+        <option value="Россия">Россия</option>
+        <option value="США">США</option>
+        <option value="Канада">Канада</option>
+        <option value="Германия">Германия</option>
+        <option value="Франция">Франция</option>
+        <option value="Италия">Италия</option>
+        <option value="Испания">Испания</option>
+        <option value="Украина">Украина</option>
+        <option value="Беларусь">Беларусь</option>
+        <option value="Казахстан">Казахстан</option>
+      </select><br>
+
+      <p>Выбор города:</p>
+      <input type="radio" id="city1" name="city" value="Москва" required>
+      <label for="city1">Москва</label><br>
+      <input type="radio" id="city2" name="city" value="Нью-Йорк">
+      <label for="city2">Нью-Йорк</label><br>
+      <input type="radio" id="city3" name="city" value="Торонто">
+      <label for="city3">Торонто</label><br>
+      <input type="radio" id="city4" name="city" value="Берлин">
+      <label for="city4">Берлин</label><br>
+      <input type="radio" id="city5" name="city" value="Париж">
+      <label for="city5">Париж</label><br>
+
+      <p>Выбор языка:</p>
+      <input type="checkbox" id="language1" name="language1">
+      <label for="language1">Русский</label><br>
+      <input type="checkbox" id="language2" name="language2">
+      <label for="language2">Английский</label><br>
+      <input type="checkbox" id="language3" name="language3">
+      <label for="language3">Французский</label><br>
+      <input type="checkbox" id="language4" name="language4">
+      <label for="language4">Немецкий</label><br>
+      <input type="checkbox" id="language5" name="language5">
+      <label for="language5">Итальянский</label><br>
+
+      <label for="profession">Выбор профессий:</label>
+      <select id="profession" name="profession" multiple required>
+        <option value="Программист">Программист</option>
+        <option value="Дизайнер">Дизайнер</option>
+        <option value="Инженер">Инженер</option>
+        <option value="Врач">Врач</option>
+        <option value="Учитель">Учитель</option>
+        <option value="Строитель">Строитель</option>
+        <option value="Юрист">Юрист</option>
+        <option value="Менеджер">Менеджер</option>
+        <option value="Фармацевт">Фармацевт</option>
+        <option value="Архитектор">Архитектор</option>
+      </select><br>
+    </div>
+
+    <div class="add_area">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required><br>
+      <label for="additionalInfo">Дополнительная информация:</label>
+      <textarea id="additionalInfo" name="additionalInfo"></textarea><br>
+    </div>
+
+    <input class="validation__btn" type="submit" value="Отправить">
+    <input class="validation__btn" type="reset" value="Очистить">
+
+  </form>
+
+
+
+</body>
+
+</html>

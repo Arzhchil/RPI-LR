@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKIDKA</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <button class="header__burger hamburger hamburger--collapse btn-reset" type="button">
+        <span class="hamburger__box">
+          <span class="hamburger__inner">
+          </span>
+        </span>
+      </button>
+      <a href="#" class="logo">SKIDKA</a>
+      <nav class="header__nav">
+        <ul class="nav__list list-reset">
+          <li>
+            <a href="#about" class="list__item js-menu-link">О компании</a>
+          </li>
+          <li>
+            <a href="#advantages" class="list__item js-menu-link">Преимущества</a>
+          </li>
+          <li>
+            <a href="#services" class="list__item js-menu-link">Услуги</a>
+          </li>
+          <li>
+            <a href="#reviews" class="list__item js-menu-link">Отзывы</a>
+          </li>
+        </ul>
+        <button onclick="LinkPage('application.html')" class="btn-reset header__btn">
+          Оставить заявку
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div id="hero" class="section hero__section">
+    <div class="container hero__container">
+      <img class="hero__img" src="img/hero_bg.jpg" alt="Фото 1">
+    </div>
+  </div>
+  <section id="about" class="section about__section">
+    <div class="container about__container">
+      <h2 class="title about__title">О компании</h2>
+      <div class="block about__block">
+        <div class="text__block">
+          <p class="desc block__desc">SKIDKA&nbsp;– инновационная система управления дисконта предприятия,
+            созданная
+            для оптимизации бизнес-процессов и&nbsp;повышения эффективности работы компании.
+            <br>
+            Наша команда специализируется на&nbsp;разработке&nbsp;и внедрении программного обеспечения, которое
+            позволяет
+            автоматизировать процесс управления системой скидок и&nbsp;акций.
+          </p>
+        </div>
+        <picture>
+          <source srcset="img/about@320.jpg" media="(max-width: 602px)">
+          <img class="about__img" src="img/about_bg.jpg" alt="Фото 2">
+        </picture>
+      </div>
+    </div>
+  </section>
+  <section id="advantages" class="section advantages__section">
+    <div class="container advantages__container">
+      <h2 class="title advantages__title">Наши преимущества</h2>
+      <ul class="advantages__list list-reset">
+        <li class="advantages__item">
+          <div class="advantages__left-side">
+            <p class="advantages__item__text">
+              Автоматизация управления
+            </p>
+          </div>
+          <div class="advantages__right-side">
+            <p class="advantages__right__text">
+              Наша компания позволит вам сэкономить время и силы вашего персонала
+            </p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__left-side">
+            <p class="advantages__item__text">
+              Гибкость
+            </p>
+          </div>
+          <div class="advantages__right-side">
+            <p class="advantages__right__text">
+              Настроим системы под потребности вашего предприятия.
+            </p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__left-side">
+            <p class="advantages__item__text">
+              Точность и надежность
+            </p>
+          </div>
+          <div class="advantages__right-side">
+            <p class="advantages__right__text">
+              Работаем с самыми передовыми технологиями
+            </p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="advantages__left-side">
+            <p class="advantages__item__text">
+              Постоянная поддержка и обновление системы
+            </p>
+          </div>
+          <div class="advantages__right-side">
+            <p class="advantages__right__text">
+              Улучшим функционал и адаптируем к новым требованиям рынка даже спустя время
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section services__section">
+    <div class="container services__container">
+      <h2 id="services" class="title services__title">Наши услуги</h2>
+      <div class="block services__block">
+        <picture>
+          <source srcset="img/services_bg.jpg" media="(max-width: 602px)">
+          <img class="services__img" src="img/services_bg.jpg" alt="Фото 3">
+        </picture>
+        <div class="services__text__block">
+          <p class="desc block__desc">Мы&nbsp;предлагаем комплексное решение для предприятий различных отраслей:
+            ритейла, ресторанного бизнеса, гостиничного хозяйства и&nbsp;других.
+            Наша система позволяет настраивать и&nbsp;управлять скидками, акциями и&nbsp;программами лояльности,
+            а&nbsp;также отслеживать и&nbsp;анализировать их&nbsp;эффективность.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="reviews" class="section reviews__section">
+    <div class="container reviews__container">
+      <h2 class="title reviews__title">Отзывы клиентов</h2>
+      <div class="content__block">
+        <div class="block__1">
+          <picture>
+            <source srcset="img/avatar@320_1.png" media="(max-width: 602px)">
+            <img class="avatar__img" src="img/reviews_avatar_1.png" alt="Фото клиента 1">
+          </picture>
+          <div class="avatar__text_content">
+            <h3 class="avatar__title">Виктор С.</h3>
+            <p class="avatar__review">Спасибо компании SKIDKA. До&nbsp;сих пор пользуемся вашей системой</p>
+          </div>
+        </div>
+        <div class="block__2">
+          <picture>
+            <source srcset="img/avatar@320_2.png" media="(max-width: 602px)">
+            <img class="avatar__img" src="img/reviews_avatar_2.png" alt="Фото клиента 2">
+          </picture>
+          <div class="avatar__text_content">
+            <h3 class="avatar__title">Анастасия Ф.</h3>
+            <p class="avatar__review">Благодарю компанию за&nbsp;помощь. Уже во&nbsp;второй раз используем вашу систему
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__content">
+        <div class="footer__up_block">
+          <div class="up_block__section_left">
+            <a href="#" class="footer__logo">skidka@gmail.com</a>
+          </div>
+          <div class="address-appliction-btn__block">
+            <p class="address">
+              Московский офис +7&nbsp;499 203-06-06
+              Берсеневский пер., д.&nbsp;5, cтр.&nbsp;4,
+              3-й эт., Москва, 119072
+            </p>
+            <p class="address">
+              Казанский офис +7&nbsp;543 241-06-06
+              Берсеневский пер., д.&nbsp;5, cтр.&nbsp;4,
+              3-й эт., Москва, 119072
+            </p>
+            <button onclick="LinkPage('application.html')" class="application__btn btn-reset">
+              Заполните заявку
+            </button>
+          </div>
+        </div>
+        <div class="footer__down_block">
+          <div class="down_block__section_left">
+            <span class="copy">©SKIDKA 2023. Все права защищены</span>
+          </div>
+          <div class="down_block__section_right">
+            <a onclick="LinkPage('documents.html')" class="policy">Документы</a>
+            <a onclick="LinkPage('postForm.html')" class="policy">POST</a>
+            <a onclick="LinkPage('getForm.html')" class="policy">GET</a>
+            <a onclick="LinkPage('searchForm.html')" class="policy">Search</a>
+            <span class="made">Made by Chilchinov</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

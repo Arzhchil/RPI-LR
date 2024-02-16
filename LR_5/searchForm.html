@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>searchForm</title>
+</head>
+
+<body>
+  <input type="text" id="search_term" placeholder="Введите запрос...">
+  <button onclick="searchOnYandex()">Поиск на Yandex</button>
+  <button onclick="searchOnRambler()">Поиск на Rambler</button>
+  <button onclick="searchOnAport()">Поиск на Aport</button>
+  <button onclick="searchOnFile()">Поиск на File</button>
+  <button onclick="searchOnGoogle()">Поиск на Google</button>
+</body>
+<script>
+  function searchOnYandex() {
+    const term = document.getElementById('search_term').value;
+    if (term=='') {
+      alert('Введите текст в поисковик')
+      return
+    }
+    const url = `https://yandex.ru/search/?text=${term}`;
+    window.open(url, 'Yan', 'left=300, top=300, width=200,hight=400,toolbar=no,menubar=no,location=no,directories=no,scrollbars=yes');
+  }
+
+  function searchOnRambler() {
+    const term = document.getElementById('search_term').value;
+    if (term=='') {
+      alert('Введите текст в поисковик')
+      return
+    }
+    const url = `https://nova.rambler.ru/search?query=${term}`;
+    window.open(url, 'Ram', 'left=300, top=300, width=200,hight=400,toolbar=no,menubar=no,location=no,directories=no,scrollbars=yes');
+  }
+
+  function searchOnAport() {
+    const term = document.getElementById('search_term').value;
+    if (term=='') {
+      alert('Введите текст в поисковик')
+      return
+    }
+    const url = `https://chelny.aport.ru/search?q=${term}`;
+    window.open(url, 'Apo', 'left=300, top=300, width=200,hight=400,toolbar=no,menubar=no,location=no,directories=no,scrollbars=yes');
+  }
+
+  function searchOnFile() {
+    const term = document.getElementById('search_term').value;
+    if (term=='') {
+      alert('Введите текст в поисковик')
+      return
+    }
+    const url = `https://www.filesearch.ru/cgi-bin/s?q=${term}`;
+    window.open(url, 'File', 'left=300, top=300, width=200,hight=400,toolbar=no,menubar=no,location=no,directories=no,scrollbars=yes');
+  }
+
+
+  function searchOnGoogle() {
+    const term = document.getElementById('search_term').value;
+    if (term=='') {
+      alert('Введите текст в поисковик')
+      return
+    }
+    const url = `https://www.google.com/search?q=${term}`;
+    window.open(url, 'Goo', 'left=300, top=300, width=200,hight=400,toolbar=no,menubar=no,location=no,directories=no,scrollbars=yes');
+  }
+
+</script>
+
+</html>
