@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LR6.1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <button id="hideBtn">Скрыть элементы</button>
+  <button id="showBtn">Показать элементы</button>
+
+  <div align="center">Cкрывается</div>
+  <p align="center">Cкрывается</p>
+  <div>Не скрывается</div>
+
+  <script>
+    $(document).ready(function () {
+      $('#hideBtn').click(function () {
+        $('div[align="center"], p[align="center"]').hide();
+      });
+
+      $('#showBtn').click(function () {
+        $('div[align="center"], p[align="center"]').show();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

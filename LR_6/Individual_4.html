@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LR6.4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    img {
+      display: block;
+      width: 150px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="startSlideShow">Нажать</button>
+  <div id="images">
+    <img src="inspect@320.jpg" alt="Image 1">
+    <img src="order-back@320-2.jpg" alt="Image 2">
+    <img src="order-back@320.jpg" alt="Image 3">
+    <img src="outlay@320.jpg" alt="Image 4">
+    <img src="work-back@320.jpg" alt="Image 5">
+    <img src="about-us-back@320.jpg" alt="Image 6">
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('#startSlideShow').click(function () {
+        $('#images img').each(function (index) {
+          if ((index + 1) % 2 !== 0) {
+            $(this).slideToggle("slow");
+          }
+        });
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

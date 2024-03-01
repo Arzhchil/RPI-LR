@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LR6.2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="colorfulInput" placeholder="Введите текст">
+</form>
+
+<script>
+$(document).ready(function(){
+    $('#colorfulInput').keypress(function(){
+        var randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
+        $(this).css('background-color', randomColor);
+    });
+});
+</script>
+
+</body>
+</html>

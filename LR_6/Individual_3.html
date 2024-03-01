@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LR6.3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .divBox {
+      width: 40px;
+      height: 40px;
+      display: none;
+      margin: 5px;
+      float: left;
+    }
+
+    #div1 {
+      background-color: red;
+    }
+
+    #div2 {
+      background-color: blue;
+    }
+
+    #div3 {
+      background-color: green;
+    }
+
+    #div4 {
+      background-color: yellow;
+    }
+
+    #div5 {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="div1" class="divBox"></div>
+  <div id="div2" class="divBox"></div>
+  <div id="div3" class="divBox"></div>
+  <div id="div4" class="divBox"></div>
+  <div id="div5" class="divBox"></div>
+
+  <button id="startBtn">Начать анимацию</button>
+
+  <script>
+    $(document).ready(function () {
+      $('#startBtn').click(function () {
+        let divs = $('.divBox').toArray();
+        let reverse = false;
+
+        function animateDivs(i) {
+          if (!reverse) {
+            $(divs[i]).fadeIn(500, function () {
+              if (i < divs.length - 1) {
+                animateDivs(i + 1);
+              } else {
+                reverse = true;
+                animateDivs(i);
+              }
+            });
+          } else {
+            $(divs[i]).fadeOut(500, function () {
+              if (i > 0) {
+                animateDivs(i - 1);
+              } else {
+                reverse = false;
+                setTimeout(function () { animateDivs(0); }, 500);
+              }
+            });
+          }
+        }
+
+        animateDivs(0);
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
